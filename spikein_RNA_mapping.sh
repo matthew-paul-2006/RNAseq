@@ -13,12 +13,14 @@
 
 #####
 #To do!!!
-#feature counts
-#need to now use this for correction. 
-#take correction and feed into edgeR
-#jupyter guidlines luis
+#Automate to take whole dataset and provide correction according to spike-in. 
+#Take correction and feed into edgeR for calling differentially expressed genes
 ####
 
+### spikein_RNA_mapping.sh ###
+#A slurm script that maps S.cerevisieae RNA datasets with S. pombe spike-ins. Will produce sam files to throw up on IGV and featurecounts 
+#files for further anlysis for reads aligned to either S. cerevisiae genome or to S. pombe genome. Based on regular RNA analysis script 
+#from Luis Silva
 
 #-----------------------#
 # How to run script #
