@@ -2040,3 +2040,134 @@ rpkm_all_brn1_exp_all_mean_corrected<-rpkm_all_brn1_exp_all_mean_corrected_log2
 rpkm_all_brn1_exp_all_mean_corrected[,7:top_mean]<-2^(rpkm_all_brn1_exp_all_mean_corrected_log2[,7:top_mean])
 
 
+
+#Create means based on corrected data. 
+cpm_all_brn1_exp_all_mean_corrected_mean<-cbind(cpm_all_brn1_exp_all_mean_corrected,cpm_all_brn1_exp_all_mean_corrected[,7],apply(cpm_all_brn1_exp_all_mean_corrected[,8:10],1,mean),cpm_all_brn1_exp_all_mean_corrected[,11], apply(cpm_all_brn1_exp_all_mean_corrected[,12:14],1,mean))
+colnames(cpm_all_brn1_exp_all_mean_corrected_mean)<-c(colnames(cpm_all_brn1_exp_all_mean_corrected), 'brn1_wt_norap_mean_corrected', 'brn1_wt_rap_mean_corrected', 'brn1_brn1_norap_mean_corrected', 'brn1_brn1_rap_mean_corrected')
+tpm_all_brn1_exp_all_mean_corrected_mean<-cbind(tpm_all_brn1_exp_all_mean_corrected,tpm_all_brn1_exp_all_mean_corrected[,7],apply(tpm_all_brn1_exp_all_mean_corrected[,8:10],1,mean),tpm_all_brn1_exp_all_mean_corrected[,11], apply(tpm_all_brn1_exp_all_mean_corrected[,12:14],1,mean))
+colnames(tpm_all_brn1_exp_all_mean_corrected_mean)<-c(colnames(tpm_all_brn1_exp_all_mean_corrected), 'brn1_wt_norap_mean_corrected', 'brn1_wt_rap_mean_corrected', 'brn1_brn1_norap_mean_corrected', 'brn1_brn1_rap_mean_corrected')
+rpkm_all_brn1_exp_all_mean_corrected_mean<-cbind(rpkm_all_brn1_exp_all_mean_corrected,rpkm_all_brn1_exp_all_mean_corrected[,7],apply(rpkm_all_brn1_exp_all_mean_corrected[,8:10],1,mean),rpkm_all_brn1_exp_all_mean_corrected[,11], apply(rpkm_all_brn1_exp_all_mean_corrected[,12:14],1,mean))
+colnames(rpkm_all_brn1_exp_all_mean_corrected_mean)<-c(colnames(rpkm_all_brn1_exp_all_mean_corrected), 'brn1_wt_norap_mean_corrected', 'brn1_wt_rap_mean_corrected', 'brn1_brn1_norap_mean_corrected', 'brn1_brn1_rap_mean_corrected')
+
+cpm_all_ycg1_exp_all_mean_corrected_mean<-cbind(cpm_all_ycg1_exp_all_mean_corrected,apply(cpm_all_ycg1_exp_all_mean_corrected[,7:8],1,mean),apply(cpm_all_ycg1_exp_all_mean_corrected[,9:10],1,mean),apply(cpm_all_ycg1_exp_all_mean_corrected[,11:12],1,mean), apply(cpm_all_ycg1_exp_all_mean_corrected[,13:14],1,mean))
+colnames(cpm_all_ycg1_exp_all_mean_corrected_mean)<-c(colnames(cpm_all_ycg1_exp_all_mean_corrected), 'ycg1_wt_norap_mean_corrected', 'ycg1_wt_rap_mean_corrected', 'ycg1_ycg1_norap_mean_corrected', 'ycg1_ycg1_rap_mean_corrected')
+tpm_all_ycg1_exp_all_mean_corrected_mean<-cbind(tpm_all_ycg1_exp_all_mean_corrected,apply(tpm_all_ycg1_exp_all_mean_corrected[,7:8],1,mean),apply(tpm_all_ycg1_exp_all_mean_corrected[,9:10],1,mean),apply(tpm_all_ycg1_exp_all_mean_corrected[,11:12],1,mean), apply(tpm_all_ycg1_exp_all_mean_corrected[,13:14],1,mean))
+colnames(tpm_all_ycg1_exp_all_mean_corrected_mean)<-c(colnames(tpm_all_ycg1_exp_all_mean_corrected), 'ycg1_wt_norap_mean_corrected', 'ycg1_wt_rap_mean_corrected', 'ycg1_ycg1_norap_mean_corrected', 'ycg1_ycg1_rap_mean_corrected')
+rpkm_all_ycg1_exp_all_mean_corrected_mean<-cbind(rpkm_all_ycg1_exp_all_mean_corrected,apply(rpkm_all_ycg1_exp_all_mean_corrected[,7:8],1,mean),apply(rpkm_all_ycg1_exp_all_mean_corrected[,9:10],1,mean),apply(rpkm_all_ycg1_exp_all_mean_corrected[,11:12],1,mean), apply(rpkm_all_ycg1_exp_all_mean_corrected[,13:14],1,mean))
+colnames(rpkm_all_ycg1_exp_all_mean_corrected_mean)<-c(colnames(rpkm_all_ycg1_exp_all_mean_corrected), 'ycg1_wt_norap_mean_corrected', 'ycg1_wt_rap_mean_corrected', 'ycg1_ycg1_norap_mean_corrected', 'ycg1_ycg1_rap_mean_corrected')
+
+cpm_all_ycs4_exp_all_mean_corrected_mean<-cbind(cpm_all_ycs4_exp_all_mean_corrected,apply(cpm_all_ycs4_exp_all_mean_corrected[,7:8],1,mean),apply(cpm_all_ycs4_exp_all_mean_corrected[,9:11],1,mean),apply(cpm_all_ycs4_exp_all_mean_corrected[,12:14],1,mean), apply(cpm_all_ycs4_exp_all_mean_corrected[,15:17],1,mean))
+colnames(cpm_all_ycs4_exp_all_mean_corrected_mean)<-c(colnames(cpm_all_ycs4_exp_all_mean_corrected), 'ycs4_wt_norap_mean_corrected', 'ycs4_wt_rap_mean_corrected', 'ycs4_ycs4_norap_mean_corrected', 'ycs4_ycs4_rap_mean_corrected')
+tpm_all_ycs4_exp_all_mean_corrected_mean<-cbind(tpm_all_ycs4_exp_all_mean_corrected,apply(tpm_all_ycs4_exp_all_mean_corrected[,7:8],1,mean),apply(tpm_all_ycs4_exp_all_mean_corrected[,9:11],1,mean),apply(tpm_all_ycs4_exp_all_mean_corrected[,12:14],1,mean), apply(tpm_all_ycs4_exp_all_mean_corrected[,15:17],1,mean))
+colnames(tpm_all_ycs4_exp_all_mean_corrected_mean)<-c(colnames(tpm_all_ycs4_exp_all_mean_corrected), 'ycs4_wt_norap_mean_corrected', 'ycs4_wt_rap_mean_corrected', 'ycs4_ycs4_norap_mean_corrected', 'ycs4_ycs4_rap_mean_corrected')
+rpkm_all_ycs4_exp_all_mean_corrected_mean<-cbind(rpkm_all_ycs4_exp_all_mean_corrected,apply(rpkm_all_ycs4_exp_all_mean_corrected[,7:8],1,mean),apply(rpkm_all_ycs4_exp_all_mean_corrected[,9:11],1,mean),apply(rpkm_all_ycs4_exp_all_mean_corrected[,12:14],1,mean), apply(rpkm_all_ycs4_exp_all_mean_corrected[,15:17],1,mean))
+colnames(rpkm_all_ycs4_exp_all_mean_corrected_mean)<-c(colnames(rpkm_all_ycs4_exp_all_mean_corrected), 'ycs4_wt_norap_mean_corrected', 'ycs4_wt_rap_mean_corrected', 'ycs4_ycs4_norap_mean_corrected', 'ycs4_ycs4_rap_mean_corrected')
+
+
+cpm_all_brn1_exp_mean_corrected_mean<-cbind(cpm_all_brn1_exp_mean_corrected,cpm_all_brn1_exp_mean_corrected[,7],apply(cpm_all_brn1_exp_mean_corrected[,8:10],1,mean),cpm_all_brn1_exp_mean_corrected[,11], apply(cpm_all_brn1_exp_mean_corrected[,12:14],1,mean))
+colnames(cpm_all_brn1_exp_mean_corrected_mean)<-c(colnames(cpm_all_brn1_exp_mean_corrected), 'brn1_wt_norap_mean_corrected', 'brn1_wt_rap_mean_corrected', 'brn1_brn1_norap_mean_corrected', 'brn1_brn1_rap_mean_corrected')
+tpm_all_brn1_exp_mean_corrected_mean<-cbind(tpm_all_brn1_exp_mean_corrected,tpm_all_brn1_exp_mean_corrected[,7],apply(tpm_all_brn1_exp_mean_corrected[,8:10],1,mean),tpm_all_brn1_exp_mean_corrected[,11], apply(tpm_all_brn1_exp_mean_corrected[,12:14],1,mean))
+colnames(tpm_all_brn1_exp_mean_corrected_mean)<-c(colnames(tpm_all_brn1_exp_mean_corrected), 'brn1_wt_norap_mean_corrected', 'brn1_wt_rap_mean_corrected', 'brn1_brn1_norap_mean_corrected', 'brn1_brn1_rap_mean_corrected')
+rpkm_all_brn1_exp_mean_corrected_mean<-cbind(rpkm_all_brn1_exp_mean_corrected,rpkm_all_brn1_exp_mean_corrected[,7],apply(rpkm_all_brn1_exp_mean_corrected[,8:10],1,mean),rpkm_all_brn1_exp_mean_corrected[,11], apply(rpkm_all_brn1_exp_mean_corrected[,12:14],1,mean))
+colnames(rpkm_all_brn1_exp_mean_corrected_mean)<-c(colnames(rpkm_all_brn1_exp_mean_corrected), 'brn1_wt_norap_mean_corrected', 'brn1_wt_rap_mean_corrected', 'brn1_brn1_norap_mean_corrected', 'brn1_brn1_rap_mean_corrected')
+
+cpm_all_ycg1_exp_mean_corrected_mean<-cbind(cpm_all_ycg1_exp_mean_corrected,apply(cpm_all_ycg1_exp_mean_corrected[,7:8],1,mean),apply(cpm_all_ycg1_exp_mean_corrected[,9:10],1,mean),apply(cpm_all_ycg1_exp_mean_corrected[,11:12],1,mean), apply(cpm_all_ycg1_exp_mean_corrected[,13:14],1,mean))
+colnames(cpm_all_ycg1_exp_mean_corrected_mean)<-c(colnames(cpm_all_ycg1_exp_mean_corrected), 'ycg1_wt_norap_mean_corrected', 'ycg1_wt_rap_mean_corrected', 'ycg1_ycg1_norap_mean_corrected', 'ycg1_ycg1_rap_mean_corrected')
+tpm_all_ycg1_exp_mean_corrected_mean<-cbind(tpm_all_ycg1_exp_mean_corrected,apply(tpm_all_ycg1_exp_mean_corrected[,7:8],1,mean),apply(tpm_all_ycg1_exp_mean_corrected[,9:10],1,mean),apply(tpm_all_ycg1_exp_mean_corrected[,11:12],1,mean), apply(tpm_all_ycg1_exp_mean_corrected[,13:14],1,mean))
+colnames(tpm_all_ycg1_exp_mean_corrected_mean)<-c(colnames(tpm_all_ycg1_exp_mean_corrected), 'ycg1_wt_norap_mean_corrected', 'ycg1_wt_rap_mean_corrected', 'ycg1_ycg1_norap_mean_corrected', 'ycg1_ycg1_rap_mean_corrected')
+rpkm_all_ycg1_exp_mean_corrected_mean<-cbind(rpkm_all_ycg1_exp_mean_corrected,apply(rpkm_all_ycg1_exp_mean_corrected[,7:8],1,mean),apply(rpkm_all_ycg1_exp_mean_corrected[,9:10],1,mean),apply(rpkm_all_ycg1_exp_mean_corrected[,11:12],1,mean), apply(rpkm_all_ycg1_exp_mean_corrected[,13:14],1,mean))
+colnames(rpkm_all_ycg1_exp_mean_corrected_mean)<-c(colnames(rpkm_all_ycg1_exp_mean_corrected), 'ycg1_wt_norap_mean_corrected', 'ycg1_wt_rap_mean_corrected', 'ycg1_ycg1_norap_mean_corrected', 'ycg1_ycg1_rap_mean_corrected')
+
+cpm_all_ycs4_exp_mean_corrected_mean<-cbind(cpm_all_ycs4_exp_mean_corrected,apply(cpm_all_ycs4_exp_mean_corrected[,7:8],1,mean),apply(cpm_all_ycs4_exp_mean_corrected[,9:11],1,mean),apply(cpm_all_ycs4_exp_mean_corrected[,12:14],1,mean), apply(cpm_all_ycs4_exp_mean_corrected[,15:17],1,mean))
+colnames(cpm_all_ycs4_exp_mean_corrected_mean)<-c(colnames(cpm_all_ycs4_exp_mean_corrected), 'ycs4_wt_norap_mean_corrected', 'ycs4_wt_rap_mean_corrected', 'ycs4_ycs4_norap_mean_corrected', 'ycs4_ycs4_rap_mean_corrected')
+tpm_all_ycs4_exp_mean_corrected_mean<-cbind(tpm_all_ycs4_exp_mean_corrected,apply(tpm_all_ycs4_exp_mean_corrected[,7:8],1,mean),apply(tpm_all_ycs4_exp_mean_corrected[,9:11],1,mean),apply(tpm_all_ycs4_exp_mean_corrected[,12:14],1,mean), apply(tpm_all_ycs4_exp_mean_corrected[,15:17],1,mean))
+colnames(tpm_all_ycs4_exp_mean_corrected_mean)<-c(colnames(tpm_all_ycs4_exp_mean_corrected), 'ycs4_wt_norap_mean_corrected', 'ycs4_wt_rap_mean_corrected', 'ycs4_ycs4_norap_mean_corrected', 'ycs4_ycs4_rap_mean_corrected')
+rpkm_all_ycs4_exp_mean_corrected_mean<-cbind(rpkm_all_ycs4_exp_mean_corrected,apply(rpkm_all_ycs4_exp_mean_corrected[,7:8],1,mean),apply(rpkm_all_ycs4_exp_mean_corrected[,9:11],1,mean),apply(rpkm_all_ycs4_exp_mean_corrected[,12:14],1,mean), apply(rpkm_all_ycs4_exp_mean_corrected[,15:17],1,mean))
+colnames(rpkm_all_ycs4_exp_mean_corrected_mean)<-c(colnames(rpkm_all_ycs4_exp_mean_corrected), 'ycs4_wt_norap_mean_corrected', 'ycs4_wt_rap_mean_corrected', 'ycs4_ycs4_norap_mean_corrected', 'ycs4_ycs4_rap_mean_corrected')
+
+
+
+
+#all corrected!
+
+par(mfrow=c(1,3))
+boxplot(cpm_all_brn1_exp_all_mean_corrected[,15:18],outline=F,ylim=c(0,300))
+boxplot(cpm_all_ycg1_exp_all_mean_corrected[,15:18],outline=F,ylim=c(0,300))
+boxplot(cpm_all_ycs4_exp_all_mean_corrected[,18:21],outline=F,ylim=c(0,300))
+
+boxplot(cpm_all_brn1_exp_mean_corrected[,15:18],outline=F,ylim=c(0,300))
+boxplot(cpm_all_ycg1_exp_mean_corrected[,15:18],outline=F,ylim=c(0,300))
+boxplot(cpm_all_ycs4_exp_mean_corrected[,18:21],outline=F,ylim=c(0,300))
+
+boxplot(tpm_all_brn1_exp_all_mean_corrected[,15:18],outline=F,ylim=c(0,300))
+boxplot(tpm_all_ycg1_exp_all_mean_corrected[,15:18],outline=F,ylim=c(0,300))
+boxplot(tpm_all_ycs4_exp_all_mean_corrected[,18:21],outline=F,ylim=c(0,300))
+
+boxplot(tpm_all_brn1_exp_mean_corrected[,15:18],outline=F,ylim=c(0,300))
+boxplot(tpm_all_ycg1_exp_mean_corrected[,15:18],outline=F,ylim=c(0,300))
+boxplot(tpm_all_ycs4_exp_mean_corrected[,18:21],outline=F,ylim=c(0,300))
+
+boxplot(rpkm_all_brn1_exp_all_mean_corrected[,15:18],outline=F,ylim=c(0,300))
+boxplot(rpkm_all_ycg1_exp_all_mean_corrected[,15:18],outline=F,ylim=c(0,300))
+boxplot(rpkm_all_ycs4_exp_all_mean_corrected[,18:21],outline=F,ylim=c(0,300))
+
+boxplot(rpkm_all_brn1_exp_mean_corrected[,15:18],outline=F,ylim=c(0,300))
+boxplot(rpkm_all_ycg1_exp_mean_corrected[,15:18],outline=F,ylim=c(0,300))
+boxplot(rpkm_all_ycs4_exp_mean_corrected[,18:21],outline=F,ylim=c(0,300))
+
+
+
+boxplot(cpm_all_brn1_exp_all_mean_corrected_mean[,19:22],outline=F,ylim=c(0,300))
+boxplot(cpm_all_ycg1_exp_all_mean_corrected_mean[,19:22],outline=F,ylim=c(0,300))
+boxplot(cpm_all_ycs4_exp_all_mean_corrected_mean[,22:25],outline=F,ylim=c(0,300))
+
+boxplot(cpm_all_brn1_exp_mean_corrected_mean[,19:22],outline=F,ylim=c(0,300))
+boxplot(cpm_all_ycg1_exp_mean_corrected_mean[,19:22],outline=F,ylim=c(0,300))
+boxplot(cpm_all_ycs4_exp_mean_corrected_mean[,22:25],outline=F,ylim=c(0,300))
+
+boxplot(tpm_all_brn1_exp_all_mean_corrected_mean[,19:22],outline=F,ylim=c(0,300))
+boxplot(tpm_all_ycg1_exp_all_mean_corrected_mean[,19:22],outline=F,ylim=c(0,300))
+boxplot(tpm_all_ycs4_exp_all_mean_corrected_mean[,22:25],outline=F,ylim=c(0,300))
+
+boxplot(tpm_all_brn1_exp_mean_corrected_mean[,19:22],outline=F,ylim=c(0,300))
+boxplot(tpm_all_ycg1_exp_mean_corrected_mean[,19:22],outline=F,ylim=c(0,300))
+boxplot(tpm_all_ycs4_exp_mean_corrected_mean[,22:25],outline=F,ylim=c(0,300))
+
+boxplot(rpkm_all_brn1_exp_all_mean_corrected_mean[,19:22],outline=F,ylim=c(0,300))
+boxplot(rpkm_all_ycg1_exp_all_mean_corrected_mean[,19:22],outline=F,ylim=c(0,300))
+boxplot(rpkm_all_ycs4_exp_all_mean_corrected_mean[,22:25],outline=F,ylim=c(0,300))
+
+boxplot(rpkm_all_brn1_exp_mean_corrected_mean[,19:22],outline=F,ylim=c(0,300))
+boxplot(rpkm_all_ycg1_exp_mean_corrected_mean[,19:22],outline=F,ylim=c(0,300))
+boxplot(rpkm_all_ycs4_exp_mean_corrected_mean[,22:25],outline=F,ylim=c(0,300))
+
+#Export all the raw datasets.
+path='~/Google_Drive/Lab/Data_Analysis/RNA/all_datasets/'
+write.csv(cpm_all_brn1_exp_all_mean_corrected_mean, paste0(path, '2018_03_23_cpm_brn1aaway_expressed.in.all.csv'))
+write.csv(cpm_all_ycg1_exp_all_mean_corrected_mean, paste0(path, '2018_03_23_cpm_ycg12_expressed.in.all.csv'))
+write.csv(cpm_all_ycs4_exp_all_mean_corrected_mean, paste0(path, '2018_03_23_cpm_ycs42_expressed.in.all.csv'))
+
+write.csv(tpm_all_brn1_exp_all_mean_corrected_mean, paste0(path, '2018_03_23_tpm_brn1aaway_expressed.in.all.csv'))
+write.csv(tpm_all_ycg1_exp_all_mean_corrected_mean, paste0(path, '2018_03_23_tpm_ycg12_expressed.in.all.csv'))
+write.csv(tpm_all_ycs4_exp_all_mean_corrected_mean, paste0(path, '2018_03_23_tpm_ycs42_expressed.in.all.csv'))
+
+write.csv(rpkm_all_brn1_exp_all_mean_corrected_mean, paste0(path, '2018_03_23_rpkm_brn1aaway_expressed.in.all.csv'))
+write.csv(rpkm_all_ycg1_exp_all_mean_corrected_mean, paste0(path, '2018_03_23_rpkm_ycg12_expressed.in.all.csv'))
+write.csv(rpkm_all_ycs4_exp_all_mean_corrected_mean, paste0(path, '2018_03_23_rpkm_ycs42_expressed.in.all.csv'))
+
+
+write.csv(cpm_all_brn1_exp_mean_corrected_mean, paste0(path, '2018_03_23_cpm_brn1aaway_expressed.csv'))
+write.csv(cpm_all_ycg1_exp_mean_corrected_mean, paste0(path, '2018_03_23_cpm_ycg12_expressed.csv'))
+write.csv(cpm_all_ycs4_exp_mean_corrected_mean, paste0(path, '2018_03_23_cpm_ycs42_expressed.csv'))
+
+write.csv(tpm_all_brn1_exp_mean_corrected_mean, paste0(path, '2018_03_23_tpm_brn1aaway_expressed.csv'))
+write.csv(tpm_all_ycg1_exp_mean_corrected_mean, paste0(path, '2018_03_23_tpm_ycg12_expressed.csv'))
+write.csv(tpm_all_ycs4_exp_mean_corrected_mean, paste0(path, '2018_03_23_tpm_ycs42_expressed.csv'))
+
+write.csv(rpkm_all_brn1_exp_mean_corrected_mean, paste0(path, '2018_03_23_rpkm_brn1aaway_expressed.csv'))
+write.csv(rpkm_all_ycg1_exp_mean_corrected_mean, paste0(path, '2018_03_23_rpkm_ycg12_expressed.csv'))
+write.csv(rpkm_all_ycs4_exp_mean_corrected_mean, paste0(path, '2018_03_23_rpkm_ycs42_expressed.csv'))
+
+
+
+
